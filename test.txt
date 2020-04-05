@@ -1,0 +1,17 @@
+begin-
+    cwd  d
+    mov ax,data ; k
+    mov ds,ax ;Устанавливаем регистр DS , чтобы он указывал на сегмент данных
+    mov ax,b ; Помещаем в регистр ax 2 слагаемое
+    idiv c ; Делим знаково  текущую переменную на с
+    add ax,a ; Прибавляем первое слагаемое
+    mov d,ax; перемещаем результат в d
+    hlt
+code ends
+data segment
+    a dw 5
+    b dw 12
+    c dw 3
+    d dw ?
+data ends
+    end begin
