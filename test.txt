@@ -4,4 +4,4 @@ begin-
     DB c
     DW word ; Пшщг
     RB d; вап
-    end begin
+end begin
